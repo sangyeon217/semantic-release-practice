@@ -56,6 +56,9 @@ jobs:
             - name: Save PM2 process list
               run: pm2 save
 
+            - name: Install Project Dependencies
+              run: npm ci
+
             - name: Release
               env:
                 GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
