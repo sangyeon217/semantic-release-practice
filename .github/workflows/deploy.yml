@@ -55,3 +55,8 @@ jobs:
             
             - name: Save PM2 process list
               run: pm2 save
+
+            - name: Release
+              env:
+                GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+              run: npm run release
