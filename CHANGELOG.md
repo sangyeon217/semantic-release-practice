@@ -1,3 +1,13 @@
+## [2.0.0](https://github.com/sangyeon217/semantic-release-practice/compare/v1.1.1...v2.0.0) (2025-04-04)
+
+### ⚠ BREAKING CHANGES
+
+* 메이쟈 업데이트 테스트
+
+### ✨ Features
+
+* 개편 ([8690446](https://github.com/sangyeon217/semantic-release-practice/commit/8690446dd014e8ea4db9c8961f2a740d1286bb7d))
+
 ## [1.1.1](https://github.com/sangyeon217/semantic-release-practice/compare/v1.1.0...v1.1.1) (2025-04-04)
 
 ### 🐛 Bug Fixes
