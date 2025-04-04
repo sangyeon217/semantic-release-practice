@@ -10,9 +10,14 @@ const targets = [
 ];
 
 targets.forEach((file) => {
-  const fullPath = path.resolve(__dirname, '..', file);
-  const content = JSON.parse(fs.readFileSync(fullPath, 'utf-8'));
-  content.version = newVersion;
-  fs.writeFileSync(fullPath, JSON.stringify(content, null, 2) + '\n');
-  console.log(`✅ Updated ${file} to version ${newVersion}`);
+  const fullPath = path.join(process.cwd(), file);
+
+  try {
+    const content = JSON.parse(fs.readFileSync(fullPath, 'utf-8'));
+    content.version = newVersion;
+    fs.writeFileSync(fullPath, JSON.stringify(content, null, 2) + '\n');
+    console.log(`✅ Updated ${file} to version ${newVersion}`);
+  } catch (err) {
+    console.error(`❌ Error occurred : ${err.message}`);
+  }
 });
