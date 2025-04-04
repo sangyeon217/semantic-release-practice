@@ -9,7 +9,7 @@ const targets = [
   'server/package.json',
 ];
 
-targets.forEach((filePath) => {
+targets.forEach((file) => {
   const fullPath = path.resolve(__dirname, '..', file);
   const content = JSON.parse(fs.readFileSync(fullPath, 'utf-8'));
   content.version = newVersion;
